@@ -3,35 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eco-Friendly Village | Section Genius</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #f9f9f9;
-            color: #333;
+            margin: 0;
+            padding: 0;
         }
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        /* Hero Section */
         .hero {
             background: url('images/eco_village.webp') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
-            animation: fadeIn 2s ease-in-out;
+            padding: 120px 20px;
+            position: relative;
         }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* darkens background */
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+        /* Hero Button */
+        .hero .btn {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+        }
+        .hero .btn:hover {
+            background-color: #218838;
+        }
+        /* Section Styling */
         .section {
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
-        .project-card {
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .card {
             transition: transform 0.3s ease-in-out;
         }
-        .project-card:hover {
+        .card:hover {
             transform: scale(1.05);
-        }
-        .faq {
-            max-width: 800px;
-            margin: auto;
         }
         .footer {
             background: #222;
@@ -39,6 +74,7 @@
             text-align: center;
             padding: 20px;
         }
+        /* Chatbot */
         .chatbot {
             position: fixed;
             bottom: 20px;
@@ -60,9 +96,20 @@
             width: 300px;
             border-radius: 10px;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .faq-answer {
+            display: none;
+        }
+        .faq-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Scroll effect */
+        .scroll-section {
+            padding: 60px 0;
         }
     </style>
 </head>
@@ -77,7 +124,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#biology">Biology</a></li>
+                <li class="nav-item"><a class="nav-link" href="#biomodule">Biology</a></li>
                 <li class="nav-item"><a class="nav-link" href="#chemistry">Chemistry</a></li>
                 <li class="nav-item"><a class="nav-link" href="#physics">Physics</a></li>
                 <li class="nav-item"><a class="nav-link" href="#computerscience">Computer Science</a></li>
@@ -91,72 +138,93 @@
 <!-- Hero Section -->
 <header class="hero">
     <h1>Eco-Friendly Village</h1>
-    <p>Innovating for a Sustainable Future</p>
+    <p>Creating a Sustainable Future with Technology</p>
+    <a href="#biomodule" class="btn">Learn More</a>
 </header>
 
-<!-- Team Section -->
-<section id="team" class="section bg-light">
+<!-- About NVL Section -->
+<section id="school-info" class="section bg-light">
     <div class="container">
-        <h2>Meet Our Team: Section Genius</h2>
-        <p>This project is brought to you by 12 talented and dedicated students from NVL International Academy, who are passionate about creating a sustainable and eco-friendly future.</p>
+        <h2 class="section-title">About NVL International Academy</h2>
+        <p>We are dedicated to providing quality education while fostering innovation and sustainability. Our team, Pre-IGCSE Section 7, has worked together on this Eco-Friendly Village project, highlighting the importance of sustainability through science and technology.</p>
+        <p><strong>Class:</strong> Pre-IGCSE Section 7</p>
+    </div>
+</section>
+
+<!-- Biology Section -->
+<section id="biomodule" class="section">
+    <div class="container">
+        <h2 class="section-title">Biology: Aeroponics & Hydroponics</h2>
+        <p>Our biology team has developed models of aeroponics and hydroponics, two soil-less farming techniques that help conserve water while growing plants. These techniques are integral to our Eco-Friendly Village's sustainability.</p>
+        <ul>
+            <li><strong>Aeroponics:</strong> Growing plants using mist without soil.</li>
+            <li><strong>Hydroponics:</strong> Growing plants in nutrient-rich water without soil.</li>
+        </ul>
+        <img src="images/aeroponics.jpg" alt="Aeroponics" class="img-fluid rounded mb-4">
+        <img src="images/hydroponics.jpg" alt="Hydroponics" class="img-fluid rounded">
+    </div>
+</section>
+
+<!-- Chemistry Section -->
+<section id="chemistry" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Chemistry: Water Purification</h2>
+        <p>Our chemistry team has developed a water purification model using natural materials such as sand, charcoal, and cotton. This model simulates how a natural filtration system can clean contaminated water for safe use.</p>
+        <img src="images/water_purification.jpg" alt="Water Purification" class="img-fluid rounded mb-4">
+    </div>
+</section>
+
+<!-- Physics Section -->
+<section id="physics" class="section">
+    <div class="container">
+        <h2 class="section-title">Physics: Hydraulic Jack Bridge</h2>
+        <p>Our physics team has demonstrated hydraulic power using a hydraulic jack bridge. This project uses syringes and pumps to lift the bridge, showing how fluid mechanics can support heavy loads.</p>
+        <img src="images/hydraulic_bridge.jpg" alt="Hydraulic Bridge" class="img-fluid rounded mb-4">
+    </div>
+</section>
+
+<!-- Computer Science Section -->
+<section id="computerscience" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Computer Science: Smart Village Technology</h2>
+        <p>We have developed a smart village website that integrates renewable energy, water management, and agriculture into a single interface. This project uses various technologies such as JavaScript, Bootstrap, and Node.js to create an interactive experience.</p>
+        <img src="images/smart_village.jpg" alt="Smart Village" class="img-fluid rounded mb-4">
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section">
+    <div class="container">
+        <h2 class="section-title">Meet Our Team</h2>
+        <p>Our project is powered by the collaboration of talented students from NVL International Academy, working in different specialized areas.</p>
         <div class="row">
             <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/team_leader.webp" class="card-img-top" alt="Team Leaders">
+                <div class="card mb-4">
+                    <img src="images/team_leader.jpg" class="card-img-top" alt="Team Leaders">
                     <div class="card-body">
                         <h5 class="card-title">Team Leaders</h5>
                         <p><strong>Shin Khant Kyaw</strong>, <strong>Cardic</strong></p>
-                        <p class="card-text">Leaders managing the project, team coordination, and decision-making.</p>
+                        <p>Managing the project and coordinating team efforts.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/physics_experts.webp" class="card-img-top" alt="Physics Experts">
-                    <div class="card-body">
-                        <h5 class="card-title">Physics Experts</h5>
-                        <p><strong>William</strong>, <strong>Mateo</strong></p>
-                        <p class="card-text">Experts in the design and execution of the hydraulic jack bridge and renewable energy systems.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/chemistry_specialists.webp" class="card-img-top" alt="Chemistry Specialists">
-                    <div class="card-body">
-                        <h5 class="card-title">Chemistry Specialists</h5>
-                        <p><strong>Hein Zaw</strong>, <strong>Zin Zin Zaw</strong></p>
-                        <p class="card-text">Designing and constructing the water purification system using natural filtration methods.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/biology_specialists.webp" class="card-img-top" alt="Biology Specialists">
+                <div class="card mb-4">
+                    <img src="images/biologist.jpg" class="card-img-top" alt="Biologist">
                     <div class="card-body">
                         <h5 class="card-title">Biology Specialists</h5>
                         <p><strong>Bhone Khant Soe</strong>, <strong>Kristen</strong></p>
-                        <p class="card-text">Focusing on aeroponics and hydroponics systems to promote plant growth.</p>
+                        <p>Specialized in aeroponics and hydroponics.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/material_procurement.webp" class="card-img-top" alt="Material Procurement & Village Construction">
+                <div class="card mb-4">
+                    <img src="images/chemists.jpg" class="card-img-top" alt="Chemists">
                     <div class="card-body">
-                        <h5 class="card-title">Material Procurement & Village Construction</h5>
-                        <p><strong>Issac</strong>, <strong>Kensmith</strong>, <strong>Baby Su Mon</strong>, <strong>Shin Min Eain</strong></p>
-                        <p class="card-text">Responsible for collecting materials and building the physical model of the eco-village.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card project-card">
-                    <img src="images/programmers.webp" class="card-img-top" alt="Programmers and Designers">
-                    <div class="card-body">
-                        <h5 class="card-title">Programmers, Editors, Content Writers & Village Designers</h5>
-                        <p><strong>Shin Khant Kyaw</strong>, <strong>Cardic</strong></p>
-                        <p class="card-text">Designing and programming the website, editing content, and managing the digital presentation of the project.</p>
+                        <h5 class="card-title">Chemistry Specialists</h5>
+                        <p><strong>Hein Zaw</strong>, <strong>Zin Zin Zaw</strong></p>
+                        <p>Working on water purification and filtration models.</p>
                     </div>
                 </div>
             </div>
@@ -164,82 +232,26 @@
     </div>
 </section>
 
-<!-- Biology Section -->
-<section id="biology" class="section bg-light">
-    <div class="container">
-        <h2>Biology: Aeroponics & Hydroponics</h2>
-        <p>We use soil-less farming techniques to grow plants efficiently. These techniques offer a way to grow plants with minimal water and nutrients.</p>
-        <ul>
-            <li><strong>What is Aeroponics?</strong> Growing plants in air or mist without using soil. The roots are suspended in the air and sprayed with nutrient-rich water mist.</li>
-            <li><strong>What is Hydroponics?</strong> Growing plants using mineral nutrient solutions in water, without the use of soil.</li>
-        </ul>
-        <img src="images/hydroponics.webp" class="img-fluid rounded" alt="Hydroponics">
-    </div>
-</section>
-
-<!-- Chemistry Section -->
-<section id="chemistry" class="section">
-    <div class="container">
-        <h2>Chemistry: Water Purification</h2>
-        <p>We designed a model of a wastewater treatment plant using natural materials to purify contaminated water.</p>
-        <ul>
-            <li><strong>Materials Used:</strong> Gravel, activated charcoal, sand, cotton, PVC pipes, and chlorine.</li>
-            <li><strong>Process:</strong> We pass dirty water through different filtration stages (gravel, charcoal, sand, etc.) to clean it.</li>
-        </ul>
-        <img src="images/water_purification.webp" class="img-fluid rounded" alt="Water Purification">
-    </div>
-</section>
-
-<!-- Physics Section -->
-<section id="physics" class="section bg-light">
-    <div class="container">
-        <h2>Physics: Hydraulic Jack Bridge</h2>
-        <p>The hydraulic jack bridge demonstrates how hydraulic force can lift and support structures. The syringe is used as a hydraulic jack and the motor controls the force to raise or lower the bridge.</p>
-        <ul>
-            <li><strong>Materials:</strong> Syringes, cardboard, PVC pipes.</li>
-            <li><strong>How it Works:</strong> The syringe acts as a hydraulic jack to lift the bridge when required. Hydraulics help us move and support heavy loads efficiently.</li>
-        </ul>
-        <img src="images/hydraulic_bridge.webp" class="img-fluid rounded" alt="Hydraulic Jack Bridge">
-    </div>
-</section>
-
-<!-- Computer Science Section -->
-<section id="computerscience" class="section">
-    <div class="container">
-        <h2>Computer Science: Smart Village Technology</h2>
-        <p>We developed a website for the smart village, which automates various systems like energy management, water purification, and agricultural monitoring.</p>
-        <ul>
-            <li><strong>Technology Used:</strong> HTML, CSS, JavaScript, Bootstrap, and Node.js.</li>
-            <li><strong>Features:</strong> The website provides real-time data, interactive maps, and automated control over various systems like water and energy usage.</li>
-        </ul>
-        <img src="images/smart_village.webp" class="img-fluid rounded" alt="Smart Village">
-    </div>
-</section>
-
 <!-- FAQ Section -->
-<section id="faq" class="section">
-    <div class="container faq">
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        <div id="faqContent">
-            <button class="btn btn-primary" id="faqBtn">Show FAQ</button>
-            <div id="faqAnswers" style="display:none;">
-                <ul>
-                    <li><strong>Q:</strong> What is aeroponics?</li>
-                    <li><strong>A:</strong> Aeroponics is the method of growing plants without soil, using mist or air to deliver nutrients to the roots.</li>
-                    <li><strong>Q:</strong> How does the hydraulic jack bridge work?</li>
-                    <li><strong>A:</strong> The hydraulic jack uses a syringe to lift a bridge, demonstrating hydraulic force and pressure.</li>
-                </ul>
-            </div>
+<section id="faq" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <button class="faq-btn" onclick="toggleFAQ()">Show FAQ</button>
+        <div class="faq-answer" id="faq-answer">
+            <p><strong>Q:</strong> What is aeroponics?</p>
+            <p><strong>A:</strong> Aeroponics is a method of growing plants in air or mist without using soil.</p>
+            <p><strong>Q:</strong> How does the hydraulic jack bridge work?</p>
+            <p><strong>A:</strong> The hydraulic jack bridge uses a syringe to lift the bridge, simulating hydraulic force.</p>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
-    <p>&copy; 2025 Section Genius | All Rights Reserved</p>
+    <p>&copy; 2025 Section Genius. All rights reserved.</p>
 </footer>
 
-<!-- Chatbot Interaction -->
+<!-- Chatbot -->
 <div class="chatbot" onclick="toggleChat()">💬</div>
 <div class="chat-window" id="chatWindow">
     <h4>Chatbot</h4>
@@ -248,27 +260,28 @@
 </div>
 
 <script>
-// FAQ Toggle
-document.getElementById("faqBtn").addEventListener("click", function() {
-    var faqAnswers = document.getElementById("faqAnswers");
-    faqAnswers.style.display = (faqAnswers.style.display === "none") ? "block" : "none";
-});
+    // FAQ toggle
+    function toggleFAQ() {
+        var faq = document.getElementById("faq-answer");
+        faq.style.display = faq.style.display === "none" ? "block" : "none";
+    }
 
-// Chatbot Toggle
-function toggleChat() {
-    var chatWindow = document.getElementById("chatWindow");
-    chatWindow.style.display = (chatWindow.style.display === "none" || chatWindow.style.display === "") ? "block" : "none";
-}
+    // Chatbot toggle
+    function toggleChat() {
+        var chatWindow = document.getElementById("chatWindow");
+        chatWindow.style.display = chatWindow.style.display === "none" || chatWindow.style.display === "" ? "block" : "none";
+    }
 
-// Handle Chat Input
-function sendChat(event) {
-    if (event.key === "Enter") {
-        var userMessage = document.getElementById("chatInput").value;
-        if (userMessage) {
-            alert("You asked: " + userMessage);
+    // Handle chat input
+    function sendChat(event) {
+        if (event.key === "Enter") {
+            var chatInput = document.getElementById("chatInput").value;
+            if (chatInput) {
+                alert("You asked: " + chatInput);
+                document.getElementById("chatInput").value = ""; // Clear input after sending
+            }
         }
     }
-}
 </script>
 
 </body>
