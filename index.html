@@ -2,71 +2,182 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Village Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Village - Section Genius</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .banner { 
-            background: url('https://source.unsplash.com/1600x600/?village,nature') center/cover no-repeat; 
-            height: 300px; color: white; text-align: center; padding-top: 100px; 
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
         }
-        .headline { font-size: 24px; font-weight: bold; color: yellow; margin-top: 20px; }
-        .section { padding: 50px 0; }
-        .card img { height: 200px; object-fit: cover; }
-        footer { background: #333; color: white; text-align: center; padding: 15px 0; margin-top: 30px; }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?eco,village') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .section {
+            padding: 50px 20px;
+        }
+        .section h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 15px;
+        }
+        .team-member img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .nav-link:hover {
+            color: #28a745 !important;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Village Project</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#updates">Updates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Section Genius</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <h1>Eco-Friendly Village</h1>
+    <p>Innovating for a Sustainable Future</p>
+</header>
+
+<!-- About Section -->
+<section id="about" class="section">
+    <div class="container">
+        <h2>About the Project</h2>
+        <p class="text-center">
+            Our team from NVL International Academy's Pre-IGCSE Section 7 is proud to present the **Eco-Friendly Village**. 
+            This project focuses on sustainable development through innovative solutions in **Biology, Physics, Chemistry, and Computer Science**.
+        </p>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section bg-light">
+    <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="row">
+            <div class="col-md-3 team-member">
+                <img src="https://via.placeholder.com/100" alt="Shin Khant Kyaw">
+                <h5>Shin Khant Kyaw</h5>
+                <p>Team Leader & Programmer</p>
+            </div>
+            <div class="col-md-3 team-member">
+                <img src="https://via.placeholder.com/100" alt="Cardic">
+                <h5>Cardic</h5>
+                <p>Team Leader & Editor</p>
+            </div>
+            <div class="col-md-3 team-member">
+                <img src="https://via.placeholder.com/100" alt="William">
+                <h5>William</h5>
+                <p>Physics Expert</p>
+            </div>
+            <div class="col-md-3 team-member">
+                <img src="https://via.placeholder.com/100" alt="Mateo">
+                <h5>Mateo</h5>
+                <p>Physics Expert</p>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Home Section -->
-    <header id="home" class="banner">
-        <h1>Welcome to Our Village Project</h1>
-        <p>Creating a sustainable future through science and technology</p>
-        <p class="headline">Cardic ဆီကနေ Hazel ဆီပေးဖို့ကျန်တဲ့အချစ်တွေ</p>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section bg-light">
-        <div class="container text-center">
-            <h2>About the Project</h2>
-            <p>Our project integrates Biology, Physics, Chemistry, and Computing to build a sustainable village.</p>
+<!-- Projects Section -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2>Our Science Fair Projects</h2>
+        <div class="row">
+            <div class="col-md-6 fade-in">
+                <h4>🌿 Biology: Aeroponics & Hydroponics</h4>
+                <p>We are growing plants without soil using nutrient-rich mist and water solutions.</p>
+            </div>
+            <div class="col-md-6 fade-in">
+                <h4>💧 Chemistry: Water Purification</h4>
+                <p>We built a wastewater treatment system using natural filtering materials.</p>
+            </div>
+            <div class="col-md-6 fade-in">
+                <h4>⚙️ Physics: Hydraulic Jack Bridge</h4>
+                <p>Our bridge model uses a hydraulic jack to demonstrate real-life applications.</p>
+            </div>
+            <div class="col-md-6 fade-in">
+                <h4>🌞 Renewable Energy</h4>
+                <p>Using solar panels and hydroelectric power to support our eco-friendly village.</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-light">
-        <div class="container text-center">
-            <h2>Contact Us</h2>
-            <p>Email: example@email.com | Phone: +123 456 7890</p>
-        </div>
-    </section>
+<!-- Contact Section -->
+<section id="contact" class="section bg-light">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p class="text-center">For inquiries, email us at <strong>sectiongenius@sciencefair.com</strong></p>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Village Project. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer class="footer">
+    <p>&copy; 2025 Section Genius - NVL International Academy</p>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript -->
+<script>
+    // Smooth Scrolling
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
 </body>
 </html>
