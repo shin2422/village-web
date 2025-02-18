@@ -3,64 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Friendly Village - Section Genius</title>
+    <title>Eco-Friendly Village | Section Genius</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        /* General Styling */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
-            scroll-behavior: smooth;
         }
         .hero {
-            background: url('https://source.unsplash.com/1600x900/?eco,village') no-repeat center center/cover;
+            background: url('images/eco_village.webp') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 80px 20px;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: bold;
+            padding: 100px 20px;
             animation: fadeIn 2s ease-in-out;
         }
-        .hero p {
-            font-size: 1.2rem;
-        }
         .section {
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
-        .section h2 {
-            text-align: center;
-            font-weight: bold;
-            margin-bottom: 30px;
+        .project-card {
+            transition: transform 0.3s ease-in-out;
         }
-        .team-member {
-            text-align: center;
-            padding: 15px;
+        .project-card:hover {
+            transform: scale(1.05);
         }
-        .team-member img {
-            width: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
+        .faq {
+            max-width: 800px;
+            margin: auto;
         }
         .footer {
             background: #222;
             color: white;
             text-align: center;
-            padding: 20px 10px;
+            padding: 20px;
         }
-        .nav-link:hover {
-            color: #28a745 !important;
+        .chatbot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            cursor: pointer;
         }
-        /* Animations */
+        .chat-window {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            background: white;
+            border: 2px solid #28a745;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
         }
     </style>
 </head>
@@ -75,10 +77,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#biology">Biology</a></li>
+                <li class="nav-item"><a class="nav-link" href="#chemistry">Chemistry</a></li>
+                <li class="nav-item"><a class="nav-link" href="#physics">Physics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#computerscience">Computer Science</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             </ul>
         </div>
     </div>
@@ -90,93 +93,86 @@
     <p>Innovating for a Sustainable Future</p>
 </header>
 
-<!-- About Section -->
-<section id="about" class="section">
+<!-- Biology Section -->
+<section id="biology" class="section bg-light">
     <div class="container">
-        <h2>About the Project</h2>
-        <p class="text-center">
-            Our team from NVL International Academy's Pre-IGCSE Section 7 is proud to present the **Eco-Friendly Village**. 
-            This project focuses on sustainable development through innovative solutions in **Biology, Physics, Chemistry, and Computer Science**.
-        </p>
+        <h2>Biology: Aeroponics & Hydroponics</h2>
+        <p>We use soil-less farming techniques to grow plants efficiently.</p>
+        <img src="images/hydroponics.webp" class="img-fluid rounded" alt="Hydroponics">
     </div>
 </section>
 
-<!-- Team Section -->
-<section id="team" class="section bg-light">
+<!-- Chemistry Section -->
+<section id="chemistry" class="section">
     <div class="container">
-        <h2>Meet Our Team</h2>
-        <div class="row">
-            <div class="col-md-3 team-member">
-                <img src="https://via.placeholder.com/100" alt="Shin Khant Kyaw">
-                <h5>Shin Khant Kyaw</h5>
-                <p>Team Leader & Programmer</p>
-            </div>
-            <div class="col-md-3 team-member">
-                <img src="https://via.placeholder.com/100" alt="Cardic">
-                <h5>Cardic</h5>
-                <p>Team Leader & Editor</p>
-            </div>
-            <div class="col-md-3 team-member">
-                <img src="https://via.placeholder.com/100" alt="William">
-                <h5>William</h5>
-                <p>Physics Expert</p>
-            </div>
-            <div class="col-md-3 team-member">
-                <img src="https://via.placeholder.com/100" alt="Mateo">
-                <h5>Mateo</h5>
-                <p>Physics Expert</p>
-            </div>
+        <h2>Chemistry: Water Purification</h2>
+        <p>Our purification system filters wastewater using natural materials.</p>
+        <img src="images/water_purification.webp" class="img-fluid rounded" alt="Water Purification">
+    </div>
+</section>
+
+<!-- Physics Section -->
+<section id="physics" class="section bg-light">
+    <div class="container">
+        <h2>Physics: Hydraulic Jack Bridge</h2>
+        <p>Our bridge uses a hydraulic jack for movement.</p>
+        <img src="images/hydraulic_bridge.webp" class="img-fluid rounded" alt="Hydraulic Jack Bridge">
+    </div>
+</section>
+
+<!-- Computer Science Section -->
+<section id="computerscience" class="section">
+    <div class="container">
+        <h2>Computer Science: Smart Village Technology</h2>
+        <p>We developed a smart village website and automated systems.</p>
+        <img src="images/smart_village.webp" class="img-fluid rounded" alt="Smart Village">
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section bg-light">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <p><strong>How does Hydroponics help plants grow faster?</strong></p>
+            <p>It delivers nutrients directly to the roots, reducing water waste and improving efficiency.</p>
         </div>
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="container">
-        <h2>Our Science Fair Projects</h2>
-        <div class="row">
-            <div class="col-md-6 fade-in">
-                <h4>🌿 Biology: Aeroponics & Hydroponics</h4>
-                <p>We are growing plants without soil using nutrient-rich mist and water solutions.</p>
-            </div>
-            <div class="col-md-6 fade-in">
-                <h4>💧 Chemistry: Water Purification</h4>
-                <p>We built a wastewater treatment system using natural filtering materials.</p>
-            </div>
-            <div class="col-md-6 fade-in">
-                <h4>⚙️ Physics: Hydraulic Jack Bridge</h4>
-                <p>Our bridge model uses a hydraulic jack to demonstrate real-life applications.</p>
-            </div>
-            <div class="col-md-6 fade-in">
-                <h4>🌞 Renewable Energy</h4>
-                <p>Using solar panels and hydroelectric power to support our eco-friendly village.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section bg-light">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p class="text-center">For inquiries, email us at <strong>sectiongenius@sciencefair.com</strong></p>
-    </div>
-</section>
+<!-- Chatbot -->
+<div class="chatbot" onclick="toggleChat()">💬 Ask a Question</div>
+<div class="chat-window" id="chatWindow">
+    <h4>Chatbot</h4>
+    <p>Ask a question about the project!</p>
+    <input type="text" id="chatInput" placeholder="Type your question...">
+    <button onclick="replyChat()">Send</button>
+    <p id="chatResponse"></p>
+</div>
 
 <!-- Footer -->
 <footer class="footer">
     <p>&copy; 2025 Section Genius - NVL International Academy</p>
 </footer>
 
-<!-- JavaScript -->
 <script>
-    // Smooth Scrolling
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-        });
-    });
+    function toggleChat() {
+        document.getElementById("chatWindow").style.display = 
+        document.getElementById("chatWindow").style.display === "none" ? "block" : "none";
+    }
+    
+    function replyChat() {
+        var userInput = document.getElementById("chatInput").value.toLowerCase();
+        var response = "Sorry, I don't understand.";
+        
+        if (userInput.includes("hydroponics")) {
+            response = "Hydroponics is a method of growing plants without soil!";
+        } else if (userInput.includes("water purification")) {
+            response = "We use natural materials to filter wastewater!";
+        }
+        
+        document.getElementById("chatResponse").innerText = response;
+    }
 </script>
 
 </body>
