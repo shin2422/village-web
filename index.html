@@ -258,6 +258,10 @@
     <p>Hi! How can I help you today?</p>
     <input type="text" id="chatInput" placeholder="Ask me anything..." onkeyup="sendChat(event)">
 </div>
+          <source src="music.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+</audio>
+        
 
 <script>
     // FAQ toggle
@@ -282,6 +286,25 @@
             }
         }
     }
+
+   document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("bg-music");
+            audio.volume = 0.5; // Set volume (optional)
+            
+            let playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("Music started playing.");
+                }).catch(error => {
+                    console.log("Auto-play was blocked. Waiting for user interaction.");
+                    document.body.addEventListener("click", function () {
+                        audio.play();
+                    }, { once: true });
+                });
+            }
+        });
+
+
 </script>
 
 </body>
