@@ -267,24 +267,23 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var audio = document.getElementById("audioPlayer");
-        audio.volume = 1.0; // Set full volume
+        audio.volume = 1.0; // Set volume to 100%
+
+        // Start playing the audio with muted enabled
+        audio.muted = true;  // Mute initially to bypass autoplay restriction
         var playPromise = audio.play();
         
         if (playPromise !== undefined) {
             playPromise.then(() => {
-                console.log("Audio is playing");
-                // Remove mute once audio starts
-                audio.muted = false;
+                console.log("Audio is playing.");
+                // After audio starts, unmute it
+                audio.muted = false;  // Unmute after play starts
             }).catch(error => {
-                console.log("Autoplay blocked. Trying muted autoplay...");
-                // If autoplay blocked, mute it first to start
-                audio.muted = true;
-                audio.play();
+                console.log("Autoplay blocked. Waiting for user interaction.");
             });
         }
     });
 </script>
- 
 
 <script>
     // FAQ toggle
