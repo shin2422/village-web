@@ -260,9 +260,19 @@
 </div>
 
     
-    <audio id="myAudio" controls autoplay>
+ <audio id="audioPlayer" autoplay controls>
     <source src="https://raw.githubusercontent.com/shin2422/village-web/main/photo.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.getElementById("audioPlayer");
+        audio.volume = 1.0; // Set full volume
+        audio.play().catch(error => {
+            console.log("Autoplay blocked! User interaction needed.");
+        });
+    });
+</script>
 
 <script>
     document.getElementById("myAudio").volume = 1.0; // Full volume
