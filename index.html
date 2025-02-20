@@ -3,120 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eco-Friendly Village | Section Genius</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
         /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        nav { position: sticky; top: 0; z-index: 100; background: #343a40; padding: 10px; }
+        .navbar-brand { font-weight: bold; color: white; }
         /* Hero Section */
         .hero {
-            background: url('https://raw.githubusercontent.com/shin2422/village-web/main/IMG_9485.jpeg') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-            position: relative;
+            background: url('https://raw.githubusercontent.com/shin2422/village-web/main/sc.JPG') no-repeat center center/cover;
+            color: white; text-align: center; padding: 120px 20px; position: relative;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* darkens background */
-        }
-        .hero h1, .hero p {
-            position: relative;
-            z-index: 1;
-        }
-        /* Hero Button */
-        .hero .btn {
-            font-size: 1.2rem;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #28a745;
-            border: none;
-            color: white;
-        }
-        .hero .btn:hover {
-            background-color: #218838;
-        }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); }
+        .hero h1, .hero p { position: relative; z-index: 1; }
         /* Section Styling */
-        .section {
-            padding: 80px 20px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .card {
-            transition: transform 0.3s ease-in-out;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        /* Chatbot */
-        .chatbot {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #28a745;
-            color: white;
-            padding: 15px;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .chat-window {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            background: white;
-            border: 2px solid #28a745;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-        }
-        .faq-answer {
-            display: none;
-        }
-        .faq-btn {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        /* Scroll effect */
-        .scroll-section {
-            padding: 60px 0;
-        }
+        .section { padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+        .card { transition: transform 0.3s ease-in-out; }
+        .card:hover { transform: scale(1.05); }
+        .footer { background: #222; color: white; text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">Section Genius</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -124,12 +38,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#biomodule">Biology</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#biology">Biology</a></li>
                 <li class="nav-item"><a class="nav-link" href="#chemistry">Chemistry</a></li>
                 <li class="nav-item"><a class="nav-link" href="#physics">Physics</a></li>
                 <li class="nav-item"><a class="nav-link" href="#computerscience">Computer Science</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             </ul>
         </div>
     </div>
@@ -137,111 +50,61 @@
 
 <!-- Hero Section -->
 <header class="hero">
-    <h1>Section Genius</h1>
-    <p>Welcome to our eco-friendly village website!!</p>
-    <a href="#biomodule" class="btn">Learn More</a>
+    <h1>Eco-Friendly Village</h1>
+    <p>Creating a Sustainable Future with Technology</p>
+    <a href="#team" class="btn btn-success">Meet the Team</a>
 </header>
 
-<!-- About NVL Section -->
-<section id="school-info" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">About NVL International Academy</h2>
-        <p>We are dedicated to providing quality education while fostering innovation and sustainability. Our team, Pre-IGCSE Section 7, has worked together on this Eco-Friendly Village project, highlighting the importance of sustainability through science and technology.</p>
-        <p><strong>Class:</strong> Pre-IGCSE Section 7</p>
-    </div>
-</section>
-
-<!-- Biology Section -->
-<section id="biomodule" class="section">
-    <div class="container">
-        <h2 class="section-title">Biology: Aeroponics & Hydroponics</h2>
-        <p>Our biology team has developed models of aeroponics and hydroponics, two soil-less farming techniques that help conserve water while growing plants. These techniques are integral to our Eco-Friendly Village's sustainability.</p>
-        <ul>
-            <li><strong>Aeroponics:</strong> Growing plants using mist without soil.</li>
-            <li><strong>Hydroponics:</strong> Growing plants in nutrient-rich water without soil.</li>
-        </ul>
-        <img src="https://ponicslife.com/wp-content/uploads/2022/05/Aeroponic-System-scaled.jpg" alt="Aeroponics" class="img-fluid rounded mb-4">
-        <img src="https://s52-hzfi.freeconvert.com/task/67b5a069166ce2c4c8b78103/IMG_9485.webp" alt="Hydroponics" class="img-fluid rounded">
-    </div>
-</section>
-
-<!-- Chemistry Section -->
-<section id="chemistry" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">Chemistry: Water Purification</h2>
-        <p>Our chemistry team has developed a water purification model using natural materials such as sand, charcoal, and cotton. This model simulates how a natural filtration system can clean contaminated water for safe use.</p>
-        <img src="images/water_purification.jpg" alt="Water Purification" class="img-fluid rounded mb-4">
-    </div>
-</section>
-
-<!-- Physics Section -->
-<section id="physics" class="section">
-    <div class="container">
-        <h2 class="section-title">Physics: Hydraulic Jack Bridge</h2>
-        <p>Our physics team has demonstrated hydraulic power using a hydraulic jack bridge. This project uses syringes and pumps to lift the bridge, showing how fluid mechanics can support heavy loads.</p>
-        <img src="images/hydraulic_bridge.jpg" alt="Hydraulic Bridge" class="img-fluid rounded mb-4">
-    </div>
-</section>
-
-<!-- Computer Science Section -->
-<section id="computerscience" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">Computer Science: Smart Village Technology</h2>
-        <p>We have developed a smart village website that integrates renewable energy, water management, and agriculture into a single interface. This project uses various technologies such as JavaScript, Bootstrap, and Node.js to create an interactive experience.</p>
-        <img src="images/smart_village.jpg" alt="Smart Village" class="img-fluid rounded mb-4">
-    </div>
-</section>
-
 <!-- Team Section -->
-<section id="team" class="section">
+<section id="team" class="section bg-light">
     <div class="container">
         <h2 class="section-title">Meet Our Team</h2>
-        <p>Our project is powered by the collaboration of talented students from NVL International Academy, working in different specialized areas.</p>
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="https://s80-ious.freeconvert.com/task/67b5a007bb252134c85b1ea1/IMG_9507.webp" class="card-img-top" alt="Team Leaders">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/sc.JPG" class="card-img-top" alt="Team Leaders">
                     <div class="card-body">
                         <h5 class="card-title">Team Leaders</h5>
-                        <p><strong>Shin Khant Kyaw</strong>, <strong>Cardic</strong></p>
-                        <p>Managing the project and coordinating team efforts.</p>
+                        <p>Shin Khant Kyaw, Cardic</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="https://s44-hzfi.freeconvert.com/task/67b5a17d83544fcf5dc43a2b/IMG_9508.webp" class="card-img-top" alt="Biologist">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/wm.jpg" class="card-img-top" alt="Physics Experts">
+                    <div class="card-body">
+                        <h5 class="card-title">Physics Experts</h5>
+                        <p>William, Mateo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/kb.jpg" class="card-img-top" alt="Biology Specialists">
                     <div class="card-body">
                         <h5 class="card-title">Biology Specialists</h5>
-                        <p><strong>Bhone Khant Soe</strong>, <strong>Kristen</strong></p>
-                        <p>Specialized in aeroponics and hydroponics.</p>
+                        <p>Bhone Khant Soe, Kristen</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mb-4">
-                    <img src="https://s48-hzfi.freeconvert.com/task/67b5a1b7166ce2c4c8b8ae1a/IMG_9509.webp" class="card-img-top" alt="Chemists">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/hz.jpg" class="card-img-top" alt="Chemistry Specialists">
                     <div class="card-body">
                         <h5 class="card-title">Chemistry Specialists</h5>
-                        <p><strong>Hein Zaw</strong>, <strong>Zin Zin Zaw</strong></p>
-                        <p>Working on water purification and filtration models.</p>
+                        <p>Hein Zaw, Zin Zin Zaw</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <button class="faq-btn" onclick="toggleFAQ()">Show FAQ</button>
-        <div class="faq-answer" id="faq-answer">
-            <p><strong>Q:</strong> What is aeroponics?</p>
-            <p><strong>A:</strong> Aeroponics is a method of growing plants in air or mist without using soil.</p>
-            <p><strong>Q:</strong> How does the hydraulic jack bridge work?</p>
-            <p><strong>A:</strong> The hydraulic jack bridge uses a syringe to lift the bridge, simulating hydraulic force.</p>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/ass.jpg" class="card-img-top" alt="Construction Team">
+                    <div class="card-body">
+                        <h5 class="card-title">Material Procurement & Construction</h5>
+                        <p>Issac, Kensmith, Shin Min Eain</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -250,71 +113,6 @@
 <footer class="footer">
     <p>&copy; 2025 Section Genius. All rights reserved.</p>
 </footer>
-
-<!-- Chatbot -->
-<div class="chatbot" onclick="toggleChat()">💬</div>
-<div class="chat-window" id="chatWindow">
-    <h4>Chatbot</h4>
-    <p>Hi! How can I help you today?</p>
-    <input type="text" id="chatInput" placeholder="Ask me anything..." onkeyup="sendChat(event)">
-</div>
-
-    
-<audio id="audioPlayer" autoplay>
-    <source src="https://raw.githubusercontent.com/shin2422/village-web/main/day.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var audio = document.getElementById("audioPlayer");
-        audio.volume = 1.0; // Ensure volume is at max
-
-        var playPromise = audio.play();
-
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                console.log("Audio is playing.");
-            }).catch(error => {
-                console.log("Autoplay blocked. Trying manual play...");
-                
-                // Play when user interacts
-                document.addEventListener("click", function () {
-                    audio.play();
-                    console.log("Audio played after user interaction.");
-                }, { once: true });
-            });
-        }
-    });
-</script>
-<script>
-    // FAQ toggle
-    function toggleFAQ() {
-        var faq = document.getElementById("faq-answer");
-        faq.style.display = faq.style.display === "none" ? "block" : "none";
-    }
-
-    // Chatbot toggle
-    function toggleChat() {
-        var chatWindow = document.getElementById("chatWindow");
-        chatWindow.style.display = chatWindow.style.display === "none" || chatWindow.style.display === "" ? "block" : "none";
-    }
-
-    // Handle chat input
-    function sendChat(event) {
-        if (event.key === "Enter") {
-            var chatInput = document.getElementById("chatInput").value;
-            if (chatInput) {
-                alert("You asked: " + chatInput);
-                document.getElementById("chatInput").value = ""; // Clear input after sending
-            }
-        }
-    }
-
-   
-            
-
-
-</script>
 
 </body>
 </html>
