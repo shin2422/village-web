@@ -260,31 +260,32 @@
 </div>
 
     
-<audio id="audioPlayer" autoplay controls>
-    <source src="https://raw.githubusercontent.com/shin2422/village-web/main/photo.mp3" type="audio/mpeg">
+<audio id="audioPlayer" autoplay>
+    <source src="https://raw.githubusercontent.com/shin2422/village-web/main/day.mp3" type="audio/mpeg">
 </audio>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         var audio = document.getElementById("audioPlayer");
-        audio.volume = 1.0; // Set volume to 100%
+        audio.volume = 1.0; // Ensure volume is at max
 
-        // Start playing the audio with muted enabled
-        audio.muted = true;  // Mute initially to bypass autoplay restriction
         var playPromise = audio.play();
-        
+
         if (playPromise !== undefined) {
             playPromise.then(() => {
                 console.log("Audio is playing.");
-                // After audio starts, unmute it
-                audio.muted = false;  // Unmute after play starts
             }).catch(error => {
-                console.log("Autoplay blocked. Waiting for user interaction.");
+                console.log("Autoplay blocked. Trying manual play...");
+                
+                // Play when user interacts
+                document.addEventListener("click", function () {
+                    audio.play();
+                    console.log("Audio played after user interaction.");
+                }, { once: true });
             });
         }
     });
 </script>
-
 <script>
     // FAQ toggle
     function toggleFAQ() {
