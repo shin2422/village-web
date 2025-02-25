@@ -23,7 +23,6 @@
             text-align: center;
             flex-direction: column;
             position: relative;
-            font-family: 'Arial', sans-serif;
         }
 
         body::before {
@@ -168,6 +167,7 @@
         </div>
     </div>
 
+    <!-- Audio element without autoplay -->
     <audio id="audioPlayer">
         <source src="https://raw.githubusercontent.com/shin2422/village-web/main/photo.mp3" type="audio/mpeg">
     </audio>
@@ -177,17 +177,21 @@
             var audio = document.getElementById("audioPlayer");
             audio.volume = 1.0; // Ensure volume is at max
 
-            // Trigger audio play when user clicks anywhere on the page
-            document.addEventListener("click", function () {
-                var playPromise = audio.play();
-                if (playPromise !== undefined) {
-                    playPromise.then(() => {
-                        console.log("Audio is playing.");
-                    }).catch(error => {
-                        console.log("Audio playback error: ", error);
-                    });
-                }
-            });
+            // Automatically try to play audio when page loads
+            var playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    console.log("Audio is playing.");
+                }).catch(error => {
+                    console.log("Autoplay blocked, trying play on interaction.");
+                    // Try again if autoplay is blocked (requires user interaction)
+                    document.addEventListener("click", function () {
+                        audio.play();
+                        console.log("Audio played after user interaction.");
+                    }, { once: true });
+                });
+            }
         });
 
         function updateCountdown() {
