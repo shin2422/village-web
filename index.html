@@ -195,7 +195,8 @@
         });
 
         function updateCountdown() {
-            const launchDate = new Date("February 29, 2025 13:00:00").getTime();
+            // Set your target date with Myanmar Time (UTC +6:30)
+            const launchDate = new Date("February 28, 2025 13:00:00 GMT+0630").getTime();
             const now = new Date().getTime();
             const timeLeft = launchDate - now;
 
