@@ -25,6 +25,15 @@
         .card { transition: transform 0.3s ease-in-out; }
         .card:hover { transform: scale(1.05); }
         .footer { background: #222; color: white; text-align: center; padding: 20px; }
+        .faq button { margin: 5px; }
+        .faq { text-align: center; }
+        /* Presentation & Our Journey */
+        .presentation, .journey { margin-bottom: 40px; }
+        .presentation ul, .journey ul { padding-left: 20px; }
+        .carousel-inner img { width: 100%; height: auto; }
+        .team-card img { width: 100%; height: auto; }
+        .team-card { text-align: center; }
+        .team-card h5 { margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -43,6 +52,9 @@
                 <li class="nav-item"><a class="nav-link" href="#chemistry">Chemistry</a></li>
                 <li class="nav-item"><a class="nav-link" href="#physics">Physics</a></li>
                 <li class="nav-item"><a class="nav-link" href="#computerscience">Computer Science</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#presentation">Presentation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#journey">Our Journey</a></li>
             </ul>
         </div>
     </div>
@@ -55,56 +67,118 @@
     <a href="#team" class="btn btn-success">Meet the Team</a>
 </header>
 
-<!-- Team Section -->
+<!-- Meet Our Team Section -->
 <section id="team" class="section bg-light">
     <div class="container">
         <h2 class="section-title">Meet Our Team</h2>
         <div class="row">
+            <!-- Team Members -->
             <div class="col-md-4">
-                <div class="card mb-4">
+                <div class="card team-card mb-4">
                     <img src="https://raw.githubusercontent.com/shin2422/village-web/main/sc.JPG" class="card-img-top" alt="Team Leaders">
                     <div class="card-body">
-                        <h5 class="card-title">Team Leaders</h5>
-                        <p>Shin Khant Kyaw, Cardic</p>
+                        <h5 class="card-title">Shin Khant Kyaw</h5>
+                        <p>Team Leader</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/wm.jpg" class="card-img-top" alt="Physics Experts">
+                <div class="card team-card mb-4">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/cardic.jpg" class="card-img-top" alt="Team Leader Cardic">
                     <div class="card-body">
-                        <h5 class="card-title">Physics Experts</h5>
-                        <p>William, Mateo</p>
+                        <h5 class="card-title">Cardic</h5>
+                        <p>Team Leader</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/kb.jpg" class="card-img-top" alt="Biology Specialists">
-                    <div class="card-body">
-                        <h5 class="card-title">Biology Specialists</h5>
-                        <p>Bhone Khant Soe, Kristen</p>
-                    </div>
+            <!-- Add more team members here -->
+        </div>
+    </div>
+</section>
+
+<!-- About the Project Section -->
+<section id="biology" class="section">
+    <div class="container">
+        <h2 class="section-title">About the Project</h2>
+        <p>This project aims to develop an eco-friendly village using scientific principles from Biology, Chemistry, Physics, and Computer Science.</p>
+        
+        <!-- Biology Section -->
+        <div class="biology section">
+            <h3>Biology: Sustainable Agriculture</h3>
+            <p>Our biology team has focused on creating an aeroponic and hydroponic farming system. These systems require no soil and use significantly less water than traditional farming, making them perfect for an eco-friendly village.</p>
+        </div>
+        
+        <!-- Chemistry Section -->
+        <div class="chemistry section">
+            <h3>Chemistry: Water Purification</h3>
+            <p>The chemistry team has developed a system that purifies and recycles wastewater. This system uses advanced filtration and chemical processes to ensure that water remains clean and safe for consumption.</p>
+        </div>
+
+        <!-- Physics Section -->
+        <div class="physics section">
+            <h3>Physics: Renewable Energy & Hydraulic Systems</h3>
+            <p>Physics plays a crucial role in our project with a focus on renewable energy sources such as solar and hydroelectric power. Our team has also designed hydraulic jack bridges, which are energy-efficient and sustainable for infrastructure.</p>
+        </div>
+
+        <!-- Computer Science Section -->
+        <div class="computerscience section">
+            <h3>Computer Science: Smart Village Systems</h3>
+            <p>Our computer science team is responsible for developing the smart village design, which includes a website and an interactive platform for residents. The system will monitor energy consumption, water usage, and farming efficiency in real-time.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Presentation Section with Video -->
+<section id="presentation" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">Presentation</h2>
+        <p>This is our comprehensive presentation, where we showcase the key components of the project in a video format. Below is the video that explains the science behind our eco-friendly village.</p>
+
+        <!-- Embedded Video -->
+        <div class="video-container">
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Our Journey Section with Slideshow -->
+<section id="journey" class="section">
+    <div class="container">
+        <h2 class="section-title">Our Journey</h2>
+        <p>Our journey started with an idea of creating an eco-friendly village that incorporates cutting-edge technology and sustainability. Here's how we've progressed:</p>
+
+        <!-- Slideshow / Carousel -->
+        <div id="journeyCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Insert 20 images in the following format -->
+                <div class="carousel-item active">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/step1.jpg" class="d-block w-100" alt="Step 1">
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/hz.jpg" class="card-img-top" alt="Chemistry Specialists">
-                    <div class="card-body">
-                        <h5 class="card-title">Chemistry Specialists</h5>
-                        <p>Hein Zaw, Zin Zin Zaw</p>
-                    </div>
+                <div class="carousel-item">
+                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/step2.jpg" class="d-block w-100" alt="Step 2">
                 </div>
+                <!-- Add more carousel items for 20 photos -->
             </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="https://raw.githubusercontent.com/shin2422/village-web/main/ass.jpg" class="card-img-top" alt="Construction Team">
-                    <div class="card-body">
-                        <h5 class="card-title">Material Procurement & Construction</h5>
-                        <p>Issac, Kensmith, Shin Min Eain</p>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#journeyCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#journeyCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="section bg-light">
+    <div class="container">
+        <h2 class="section-title">FAQs</h2>
+        <div class="faq">
+            <button class="btn btn-info" onclick="alert('The goal is to design a self-sustaining, eco-friendly village using scientific principles.')">What is the goal of this project?</button>
+            <button class="btn btn-info" onclick="alert('The project promotes sustainability through renewable energy, water purification, and soil-free farming.')">How does the project promote sustainability?</button>
+            <button class="btn btn-info" onclick="alert('The biggest challenges were budget constraints, sourcing materials, and developing working models.')">What were the biggest challenges?</button>
         </div>
     </div>
 </section>
