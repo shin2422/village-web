@@ -34,6 +34,55 @@
         .team-card img { width: 100%; height: auto; }
         .team-card { text-align: center; }
         .team-card h5 { margin-top: 10px; }
+        /* General Section Styling */
+.section {
+    padding: 80px 20px;
+}
+
+/* Video Presentation Section */
+#video-presentation {
+    background-color: #f9f9f9;
+}
+
+/* Memory of the Science Fair Journey Section */
+#memory {
+    background-color: #f1f1f1;
+    margin-top: 50px;
+}
+
+/* Video Styling */
+video {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for the video */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a better look */
+}
+
+/* Section Title Styling */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Subtitle Styling for Video Presentation */
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Responsive Design for Small Devices */
+@media (max-width: 768px) {
+    video {
+        height: auto; /* Adjust height for smaller screens */
+    }
+    .section-title {
+        font-size: 1.5rem; /* Slightly smaller title for small screens */
+    }
+}
     </style>
 </head>
 <body>
@@ -42,24 +91,33 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">Section Genius</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#biology">Biology</a></li>
-                <li class="nav-item"><a class="nav-link" href="#chemistry">Chemistry</a></li>
-                <li class="nav-item"><a class="nav-link" href="#physics">Physics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#computerscience">Computer Science</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#presentation">Presentation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#journey">Our Journey</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Meet the Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#biology">Biology</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#chemistry">Chemistry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#physics">Physics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#computerscience">Computer Science</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-
 <!-- Hero Section -->
 <header class="hero">
     <h1>Eco-Friendly Village</h1>
@@ -121,48 +179,41 @@
     </div>
 </section>
 
-<!-- About the Project Section -->
-<section id="biology" class="section">
+https://shin2422.github.io/village-web/#computerscience
+
+<!-- Video Presentation Section -->
+<section id="video-presentation" class="section">
     <div class="container">
-        <h2 class="section-title">About the Project</h2>
-        <p>This project aims to develop an eco-friendly village using scientific principles from Biology, Chemistry, Physics, and Computer Science.</p>
+        <h2 class="section-title">Video Presentations</h2>
         
-        <!-- Biology Section -->
-        <div class="biology section">
-            <h3>Biology: Sustainable Agriculture</h3>
-            <p>Our biology team has focused on creating an aeroponic and hydroponic farming system. These systems require no soil and use significantly less water than traditional farming, making them perfect for an eco-friendly village.</p>
+        <!-- First Video Presentation -->
+        <div class="mb-4">
+            <h3>Video Presentation 1</h3>
+            <video width="100%" controls>
+                <source src="path/to/your/first-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
         
-        <!-- Chemistry Section -->
-        <div class="chemistry section">
-            <h3>Chemistry: Water Purification</h3>
-            <p>The chemistry team has developed a system that purifies and recycles wastewater. This system uses advanced filtration and chemical processes to ensure that water remains clean and safe for consumption.</p>
-        </div>
-
-        <!-- Physics Section -->
-        <div class="physics section">
-            <h3>Physics: Renewable Energy & Hydraulic Systems</h3>
-            <p>Physics plays a crucial role in our project with a focus on renewable energy sources such as solar and hydroelectric power. Our team has also designed hydraulic jack bridges, which are energy-efficient and sustainable for infrastructure.</p>
-        </div>
-
-        <!-- Computer Science Section -->
-        <div class="computerscience section">
-            <h3>Computer Science: Smart Village Systems</h3>
-            <p>Our computer science team is responsible for developing the smart village design, which includes a website and an interactive platform for residents. The system will monitor energy consumption, water usage, and farming efficiency in real-time.</p>
+        <!-- Second Video Presentation -->
+        <div class="mb-4">
+            <h3>Video Presentation 2</h3>
+            <video width="100%" controls>
+                <source src="path/to/your/second-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 </section>
 
-<!-- Presentation Section with Video -->
-<section id="presentation" class="section bg-light">
+<!-- Memory of the Science Fair Journey -->
+<section id="memory" class="section bg-light">
     <div class="container">
-        <h2 class="section-title">Presentation</h2>
-        <p>This is our comprehensive presentation, where we showcase the key components of the project in a video format. Below is the video that explains the science behind our eco-friendly village.</p>
-
-        <!-- Embedded Video -->
-        <div class="video-container">
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <h2 class="section-title">Memory of the Science Fair Journey</h2>
+        <video width="100%" controls>
+            <source src="path/to/your/science-fair-journey.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </section>
 
