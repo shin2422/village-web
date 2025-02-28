@@ -1,1 +1,9 @@
 https://youtu.be/VnI0k1y2ocs?si=qyptJU2bzVg2m9t2
+<!-- Presentation Video Section -->
+<section id="presentation-video" style="background-color: #e3f2fd; padding: 80px 20px; text-align: center;">
+    <h2 class="section-title">Presentation Video</h2>
+    <p>Watch our full project presentation, where we explain the Eco-Friendly Village concept in detail.</p>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+</section>
+
+<li class="nav-item"><a class="nav-link" href="#presentation-video">Presentation</a></li>
